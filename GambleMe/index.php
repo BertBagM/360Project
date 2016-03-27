@@ -19,24 +19,20 @@ and open the template in the editor.
     
         <body>
 
+            
+            
+             
             <?php
             session_start();
 
             include_once('NavBar.php');
             //include_once('SlideShow.php');
             ?>
-
+<P> <-- current bets table </p>
+           
 
             <div id="section-top">
 
-
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
 
                 <div class="content-container content">
                     <section class="module">

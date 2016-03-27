@@ -17,7 +17,7 @@ and open the template in the editor.
         <?php
         session_start();
         session_destroy();
-        header('Location: userlogin.html');
+        header('Location: index.php');
         ?>
     </body>
 </html>

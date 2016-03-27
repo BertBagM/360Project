@@ -1,66 +1,29 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
-
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <title>Login</title>
     </head>
     <body>
-
-
-
-        <?php
-        session_start();
-        $name = filter_input(INPUT_POST, 'username');
-        $pass = filter_input(INPUT_POST, 'password');
-
-
-// MAKES CONNECTION
-        $servername = "localhost";
-        $username = "root";
-        $password = "abcde3";
-        $dbname = "360Project";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-// CHECKS CONNECTIOn
-        if ($conn->connect_error) {
-            print('lolfail');
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-
-// QUERIES
-
-        $sql = "SELECT * FROM login WHERE username = '$name' AND password = '$pass';";
-        $result = $conn->query($sql);
-
-
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
         
-        if ($result -> num_rows ==1) {
-            
-            $balancesql = "SELECT balance FROM login WHERE username = '$name';";
+        <?php
+            session_start();
 
-            $_SESSION["user"] = $name;
-            
-            $balanceResult = $conn->query($balancesql);
-            $_SESSION["balance"] = $balanceResult -> fetch_array()['balance'];
+            include_once('NavBar.php');
+            //include_once('SlideShow.php');
+            ?>
+        <fieldset> <legend><h3> Login Form </h3></legend>
 
-            header('Location: index.php');
-        } else {
+            <form method="post" action="userloginFunc.php">
+                <p><strong>Username:</strong><br/>
+                    <input type="text" name="username"/></p>
+                <p><strong>Password:</strong><br/>
+                    <input type="password" name="password"/></p>
+                <p><input type="submit" name="submit" value="login"/></p>
 
+            </form><form method="post" action="signup.html">
+                <p><input type="submit" name="submit" value="signup"/></p>
+            </form>
 
-            header('Location: userlogin.html');
-        }
-        ?>
+        </fieldset>
     </body>
 </html>

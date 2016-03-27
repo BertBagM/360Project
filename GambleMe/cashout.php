@@ -1,8 +1,26 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deposit</title>
+    </head>
+    <body>
+        
+        <?php
+            session_start();
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+            include_once('NavBar.php');
+            //include_once('SlideShow.php');
+            ?>
+        
+        
+        
+        <form method="post" action="cashoutFunc.php">
+            <fieldset> <legend><h3>Deposit </h3></legend>
+                <p><strong>How much would you like to withdraw?</strong><br/>
+                    <input type="text" name="cashout"/></p>
+                 
+                <p><input type="submit" name="submit" value="cashout"/></p>
+                
+            </fieldset>
+    </body>
+</html>

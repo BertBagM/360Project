@@ -20,7 +20,7 @@ and open the template in the editor.
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header navbar-left">
-                    <a class="navbar-brand" href="index.html"<span>Home</span>
+                    <a class="navbar-brand" href="index.php"<span>Home</span>
                     </a>
                 </div>
 
@@ -79,11 +79,11 @@ and open the template in the editor.
                     );
 
                     echo('<div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="deposit.html">  <span>Deposit</span>
+                    <a class="navbar-brand" href="deposit.php">  <span>Deposit</span>
                     </a>
                 </div>
                             <div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="cashout.html">  <span>Cashout</span>
+                    <a class="navbar-brand" href="cashout.php">  <span>Cashout</span>
                     </a>
                 </div>'
                     );
@@ -97,8 +97,10 @@ and open the template in the editor.
             </div>
         </nav>
 
-<?php
-session_start();
-?>
+                <br>
+                <br>
+                <br>
+                
+                
     </body>
 </html>
