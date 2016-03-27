@@ -4,13 +4,13 @@
         <title>Login</title>
     </head>
     <body>
-        
-        <?php
-            session_start();
 
-            include_once('NavBar.php');
-            //include_once('SlideShow.php');
-            ?>
+        <?php
+        session_start();
+
+        include_once('NavBar.php');
+        //include_once('SlideShow.php');
+        ?>
         <fieldset> <legend><h3> Login Form </h3></legend>
 
             <form method="post" action="userloginFunc.php">

@@ -1,5 +1,5 @@
 body {
-   
+   margin: 0;
     
 }
 
@@ -35,25 +35,32 @@ strong {
     display: none;
 }
 
-#section-top h3 {
-    color: #000;
-    font: normal 300 12px/28px 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-top: 16px;
-    text-transform: uppercase;
-}
-
-#section-top h3.no-padding {
+ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
-#section-top h3 span.underline {
-    padding-bottom: 3px;
-    border-bottom: 0px solid #777;
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
 }
 
-#section-top h5 {
-    color: #ccc;
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
 }
 
 #section-top .block {
@@ -130,159 +137,12 @@ strong {
     margin-bottom: 20px;
 }
 
-/* Nested Column Classes */
-.column.alpha, .columns.alpha {
-    margin-left: 0;
-}
-
-.column.omega, .columns.omega {
-    margin-right: 0;
-}
-
-/* Base Grid */
-.container .one.column, .container .one.columns {
-    width: 20px;
-}
-
-.container .two.columns {
-    width: 80px;
-}
-
-.container .three.columns {
-    width: 140px;
-}
-
-.container .four.columns {
-    width: 200px;
-}
-
-.container .five.columns {
-    width: 260px;
-}
-
-.container .six.columns {
-    width: 320px;
-}
-
-.container .seven.columns {
-    width: 380px;
-}
-
-.container .eight.columns {
-    width: 440px;
-}
-
-.container .nine.columns {
-    width: 500px;
-}
-
-.container .ten.columns {
-    width: 560px;
-}
-
-.container .eleven.columns {
-    width: 620px;
-}
-
-.container .twelve.columns {
-    width: 680px;
-}
-
-.container .thirteen.columns {
-    width: 740px;
-}
-
-.container .fourteen.columns {
-    width: 800px;
-}
-
-.container .fifteen.columns {
-    width: 860px;
-}
-
-.container .sixteen.columns {
-    width: 920px;
-}
-
-/* Offsets */
-.container .offset-by-one {
-    padding-left: 60px;
-}
-
-.container .offset-by-two {
-    padding-left: 120px;
-}
-
-.container .offset-by-three {
-    padding-left: 180px;
-}
-
-.container .offset-by-four {
-    padding-left: 240px;
-}
-
-.container .offset-by-five {
-    padding-left: 300px;
-}
-
-.container .offset-by-six {
-    padding-left: 360px;
-}
-
-.container .offset-by-seven {
-    padding-left: 420px;
-}
-
-.container .offset-by-eight {
-    padding-left: 480px;
-}
-
-.container .offset-by-nine {
-    padding-left: 540px;
-}
-
-.container .offset-by-ten {
-    padding-left: 600px;
-}
-
-.container .offset-by-eleven {
-    padding-left: 660px;
-}
-
-.container .offset-by-twelve {
-    padding-left: 720px;
-}
-
-.container .offset-by-thirteen {
-    padding-left: 780px;
-}
-
-.container .offset-by-fourteen {
-    padding-left: 840px;
-}
-
-.container .offset-by-fifteen {
-    padding-left: 900px;
-}
-
-/* #Images
-================================================== */
-img.scale-with-grid {
-    max-width: 100%;
-    height: auto;
-}
 
 .image {
     position: relative;
     width: 0 auto; /* for IE 6 */
 }
 
-h7 {
-    position: absolute;
-    top: 200px;
-    left: 0;
-    width: 100%;
-}
 .navbar.navbar-default {
     background-color: #cccccc;
     border-color: #E7E7E7;
@@ -298,58 +158,6 @@ h7 {
     padding: 0 4px;
 }
 
-.navbar .navbar-nav>li>a.btn {
-    padding: 6px 12px;
-    color: #FFFFFF;
-}
-
-.navbar .navbar-nav>li>a.btn:hover {
-    color: #d43f3a;
-}
-
-.navbar .dropdown-menu {
-    min-width: 240px;
-}
-
-.navbar .cart-dropdown-header {
-    padding: 4px 8px;
-    margin: 0 0 5px 0;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #CCCCCC;
-}
-
-.navbar .cart-dropdown-header-label {
-    float: left;
-    margin: 0 6px;
-    font-size: 1.3em;
-}
-
-.navbar .cart-dropdown-checkout, .navbar .cart-dropdown-empty {
-    float: right;
-    padding: 0 6px;
-    line-height: 25px;
-    color: #337ab7;
-    outline: none;
-}
-
-.navbar .cart-dropdown-item {
-    position: relative;
-}
-
-.navbar .cart-dropdown-label {
-    padding-right: 30px;
-}
-
-.navbar .cart-dropdown-remove {
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -10px;
-    border: 0;
-    background: none;
-    outline: none;
-}
 
 .carousel>.carousel-header {
     position: absolute;
@@ -369,115 +177,6 @@ h7 {
     color: #FFFFFF;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
-
-#section-resume {
-    color: #666;
-    background: #fff;
-    font: normal 16px/26px 'PT Serif', Georgia, serif;
-    padding: 60px 0 20px 0;
-}
-
-#section-resume .section-title {
-    color: #44bbaa;
-    padding: 50px 0;
-    display: none;
-}
-
-#section-resume  h6 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 200%;
-}
-
-#section-resume h3 {
-    color: #000;
-    font: normal 300 12px/28px 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-top: 16px;
-    text-transform: uppercase;
-}
-
-#section-resume h3.no-padding {
-    padding: 0;
-}
-
-#section-resume h3 span.underline {
-    padding-bottom: 3px;
-    border-bottom: 0px solid #777;
-}
-
-#section-resume h5 {
-    color: #ccc;
-}
-
-#section-resume .block {
-    margin-bottom: 10px;
-}
-
-#section-resume .block.last {
-    margin-bottom: 0px;
-}
-
-#section-resume .item {
-    margin-bottom: 10px;
-}
-
-#section-resume .item>div {
-    padding-top: 15px;
-}
-
-#section-resume .item.no-border>div, #section-resume .item>div.no-border
-{
-    border-top: none;
-}
-
-#section-resume .item h4 {
-    color: #df4244;
-    font: normal 14px/24px 'museo_slab500', 'PT Serif', Georgia, serif;
-}
-
-#section-resume .item div h4+p {
-    color: #666;
-    font: normal 14px/24px 'PT Serif', Georgia, serif;
-    margin-top: 0;
-}
-
-#section-resume .item div p.desc {
-    color: #656565;
-    font: normal 13px/23px 'museo_slab500', 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-top: 15px;
-}
-
-#section-resume .item div>p.date {
-    color: #444;
-    font: normal 13px/23px 'PT Serif', Georgia, serif;
-}
-
-#section-resume .item div>p.date span.label {
-    display: inline-block;
-    color: #aaa;
-    background: #111;
-    padding: 4px 8px;
-    margin-top: 6px;
-    font: normal 10px/20px 'museo_slab500', 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#section-resume {
-    width: 900px;
-    margin: 0 auto;
-    vertical-align: middle;
-}
-
-#section-projects {
-    width: 900px;
-    margin: 0 auto;
-    vertical-align: middle;
-}
-
 #section-top {
     width: 900px;
     margin: 0 auto;
