@@ -48,19 +48,19 @@ and open the template in the editor.
         $balanceResult = $conn->query($balancesql);
         $initialBalance = $balanceResult->fetch_array()['balance'];
 
-        $newBalance = $initialBalance - $cashout;
+        $newBalance = $initialFBalance - $cashout;
 
 
         $newbalancesql = "UPDATE login SET balance = $newBalance where username = '$name';";
 
-
-        print(" ini $initialBalance   ");
-        print("dep $cashout     ");
-        print(" new $newBalance   ");
-        print(" SQL $newbalancesql    ");
+        $zero = 0;
+        
+        // agh wtf not working
+        if ($newBalance <= $zero) {
+            header('Location: index.php');
+        }
         $conn->query($newbalancesql);
-
-        header('Location: index.php');
+        
         ?>
     </body>
 </html>
