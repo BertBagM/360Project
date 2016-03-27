@@ -63,6 +63,7 @@ and open the template in the editor.
                         <option value="New Jersey">New Jersey</option>
                         <option value="New York">New York</option>
                         <option value="Ottawa">Ottawa</option>
+                        <option value="Philadelphia">Philadelphia</option>  
                         <option value="Pittsburgh">Pittsburgh </option>
                         <option value="San Jose">San Jose</option>
                         <option value="St. Louis">St. Louis</option>
@@ -94,6 +95,7 @@ and open the template in the editor.
                         <option value="New Jersey">New Jersey</option>
                         <option value="New York">New York</option>
                         <option value="Ottawa">Ottawa</option>
+                        <option value="Philadelphia">Philadelphia</option>                        
                         <option value="Pittsburgh">Pittsburgh </option>
                         <option value="San Jose">San Jose</option>
                         <option value="St. Louis">St. Louis</option>
