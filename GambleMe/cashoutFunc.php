@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-
-
-
-        <?php
+      <?php
         session_start();
         $cashout = filter_input(INPUT_POST, 'cashout');
 
@@ -48,7 +30,7 @@ and open the template in the editor.
         $balanceResult = $conn->query($balancesql);
         $initialBalance = $balanceResult->fetch_array()['balance'];
 
-        $newBalance = $initialFBalance - $cashout;
+        $newBalance = $initialBalance - $cashout;
 
 
         $newbalancesql = "UPDATE login SET balance = $newBalance where username = '$name';";
@@ -56,11 +38,9 @@ and open the template in the editor.
         $zero = 0;
         
         // agh wtf not working
-        if ($newBalance <= $zero) {
-            header('Location: index.php');
-        }
+       // if ($newBalance <= $zero) {
+        //    header('Location: index.php');
+        //}
         $conn->query($newbalancesql);
-        
+        header('Location: index.php');
         ?>
-    </body>
-</html>

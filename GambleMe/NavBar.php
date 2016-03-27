@@ -53,6 +53,11 @@ and open the template in the editor.
 
 
 
+                    echo('<div class="navbar-header navbar-left">
+                    <a class="navbar-brand" href="BetPage.php">  <span>Place Bet</span>
+                    </a>
+                </div>
+               ');
 
                     $balancesql = "SELECT balance FROM login WHERE username = '$name';";
 
