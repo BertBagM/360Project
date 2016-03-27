@@ -14,6 +14,17 @@ and open the template in the editor.
         <link rel="stylesheet" href="vendor/stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
 
+        <style>
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
+        </style>
     </head>
 
 
@@ -26,15 +37,15 @@ and open the template in the editor.
         session_start();
 
         include_once('NavBar.php');
-        //include_once('SlideShow.php');
+        include_once('currentBets.php');
         ?>
 
-        <p> HOCKEY CENTRAL </P>
 
 
 
-        
-        
-        
+        <div id="content">
+            <iframe width="100%" height="100%" frameborder="0" src="https://www.nhl.com/schedule" />
+        </div>
+
     </body>
 </html>

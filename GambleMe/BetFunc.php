@@ -32,8 +32,5 @@ $sql = "INSERT INTO Bets (username, winner,loser,gameDate, amount) VALUES('$name
 $conn->query($sql);
 
 
-print("$sql");
-
-
-//header('Location: index.php');
+header('Location: index.php');
 ?>
