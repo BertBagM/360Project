@@ -5,5 +5,10 @@
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
             <name>CS360Site</name>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>columbus</word>
+            <word>columbusDalla</word>
+            <word>EdmontonFlorid</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>
