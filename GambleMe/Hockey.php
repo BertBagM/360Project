@@ -41,11 +41,8 @@ and open the template in the editor.
         ?>
 
 
-
-
-        <div id="content">
-            <iframe width="100%" height="100%" frameborder="0" src="https://www.nhl.com/schedule" />
-        </div>
-
+   <div id="content">
+                <iframe width="100%" height="100%" marginwidth="50" frameborder="0" src="https://www.nhl.com/schedule" />
+            </div>
     </body>
 </html>

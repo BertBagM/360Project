@@ -19,13 +19,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$name = $_SESSION["user"];
+if($_SESSION["user"] == NULL){
+    
+}else{
+    
+    $name = $_SESSION["user"];
 
 // prints
 $sql = "SELECT * FROM Bets WHERE username = '$name';";
 
 
 $betList = $conn->query($sql);
+
 
 echo('<ul><li><h1>Current Bets</h1></li>');
 while ($row = $betList->fetch_assoc()) {
@@ -51,4 +56,6 @@ while ($row = $betList->fetch_assoc()) {
 }
 
 echo('</ul>');
+}
+
 ?>
