@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // MAKES CONNECTION
 $servername = "localhost";
@@ -9,11 +11,44 @@ $username = "root";
 $password = "abcde3";
 $dbname = "360Project";
 
-echo('<ul>
-    <li><h1>Current Bets</h1></li>
-  <li><a class="active" href="#home">Homgge</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>');
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+// CHECKS CONNECTIOn
+if ($conn->connect_error) {
+    print('lolfail');
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$name = $_SESSION["user"];
+
+// prints
+$sql = "SELECT * FROM Bets WHERE username = '$name';";
+
+
+$betList = $conn->query($sql);
+
+echo('<ul><li><h1>Current Bets</h1></li>');
+while ($row = $betList->fetch_assoc()) {
+    echo('<li>');
+
+    
+    
+    echo '<p>image /use winner row to find filepath</p>';
+    echo $row["winner"];
+
+    echo " VS. ";
+    echo $row["loser"];
+
+    echo "<br><p>ON</P>";
+    echo $row["gameDate"];
+    echo "<br><p>FOR </P>";
+    echo $row["amount"];
+
+    echo "<br>";
+    echo "<br>";
+
+    echo('</li>');
+}
+
+echo('</ul>');
 ?>

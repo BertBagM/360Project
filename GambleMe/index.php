@@ -63,8 +63,6 @@ li a:hover:not(.active) {
         ?>
        
         
-        
-      
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
 
@@ -127,27 +125,5 @@ li a:hover:not(.active) {
     
 </div>
 
-
-    <div style="margin-left:25%;padding:1px 16px;">
-        <h2>Title</h2>
-        <div class="col-sm-10">  <a href="Hockey.php"<span><h2>Hockey</h2></span>
-            </a>
-            <p>
-                The greatest game on Earth
-            </p>
-        </div>
-        
-        
-    </div>
-
-    
-
-
-
-
-
-    <?php
-    session_start();
-    ?>
 </body>
 </html>
