@@ -45,6 +45,6 @@ if ($result->num_rows == 1) {
 } else {
 
 
-    header('Location: userlogin.html');
+    header('Location: userlogin.php');
 }
 ?>

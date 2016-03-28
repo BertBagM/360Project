@@ -5,6 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html><head>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Brett McLaren - Personal</title>
@@ -16,6 +17,7 @@ and open the template in the editor.
 <style>
 body {
     margin: 0;
+     background-image: url("http://www.insidehockey.com/wp-content/uploads/2014/09/ice-background.jpg");
 }
 
 ul {
@@ -59,15 +61,15 @@ li a:hover:not(.active) {
 
         include_once('NavBar.php');
         //include_once('SlideShow.php');
-        include_once('currentBets.php');
+        //include_once('currentBets.php');
         ?>
        
         
 
-<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <div style="margin-left:25%;padding:1px 16px;height:1000px;background-color: transparent;">
 
     
-    <div id="section-top">
+    <div id="section-top" style="background-color: transparent;">
 
 
         <div class="content-container content">
@@ -79,7 +81,7 @@ li a:hover:not(.active) {
                         </div>
                         <div class="col-sm-10">  <a href="Hockey.php"<span><h2>Hockey</h2></span>
                             </a>
-                            <p>
+                            <p style="color: darkslategray; font-style: italic; font-size: 20;">
                                 The greatest game on Earth
                             </p>
                         </div>
@@ -96,7 +98,7 @@ li a:hover:not(.active) {
                         </div>
                         <div class="col-sm-10">  <a href="Football.php"<span><h2>Football</h2></span>
                             </a>
-                            <p>
+                            <p style="color: darkslategray; font-style: italic; font-size: 20;">
                                 HandEgg
                             </p>
                         </div>
@@ -113,7 +115,7 @@ li a:hover:not(.active) {
                         </div>
                         <div class="col-sm-10">  <a href="Basketball.php"<span><h2>Basketball</h2></span>
                             </a>
-                            <p>
+                            <p style="color: darkslategray; font-style: italic; font-size: 20;">
                                 The worst version of laundry
                             </p>
                         </div>
