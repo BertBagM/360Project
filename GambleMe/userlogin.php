@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Login</title>
+        <link rel="stylesheet" href="stylesheets/main.css">
     </head>
+
     <body>
 
         <?php
@@ -10,10 +12,13 @@
 
         include_once('NavBar.php');
         //include_once('SlideShow.php');
+        echo('<br>');
         ?>
-        <fieldset> <legend><h3> Login Form </h3></legend>
+        <fieldset> 
 
             <form method="post" action="userloginFunc.php">
+
+                <legend><h3> Login</h3></legend>
                 <p><strong>Username:</strong><br/>
                     <input type="text" name="username"/></p>
                 <p><strong>Password:</strong><br/>

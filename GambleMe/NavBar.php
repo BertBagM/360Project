@@ -103,8 +103,6 @@ and open the template in the editor.
         </nav>
 
                 <br>
-                <br>
-                <br>
                 
                 
     </body>

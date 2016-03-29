@@ -9,6 +9,13 @@ $username = "root";
 $password = "abcde3";
 $dbname = "360Project";
 
+
+$dropBets 
+$dropHockey
+$dropLogin
+$createBrettRossAdminDan
+
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // CHECKS CONNECTIOn
 if ($conn->connect_error) {

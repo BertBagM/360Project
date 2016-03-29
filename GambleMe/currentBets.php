@@ -36,8 +36,12 @@ echo('<ul><li><h1>Current Bets</h1></li>');
 while ($row = $betList->fetch_assoc()) {
     echo('<li>');
 
-    
-    
+   
+
+            $team1= $row["winner"];
+            $team2= $row["loser"];
+     echo'<img src="images/HockeyLogos/$team1.gif" style="width:304px;height:228px;">';
+
     echo '<p>image /use winner row to find filepath</p>';
     echo $row["winner"];
 

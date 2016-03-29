@@ -1,9 +1,19 @@
 body {
-   margin: 0;
-  
+    margin: 0;
+    background-image: url("http://www.insidehockey.com/wp-content/uploads/2014/09/ice-background.jpg");
 }
 
 
+// modifies the field boxes
+fieldset{
+    
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin:auto;
+    
+}
 strong {
     font-weight: bold;
 }
@@ -146,6 +156,13 @@ li a:hover:not(.active) {
 .navbar.navbar-default {
     background-color: #cccccc;
     border-color: #E7E7E7;
+    padding: 0px 0px 0px 0px;
+}
+
+.navbar.navbar-fixed-top {
+    background-color: #cccccc;
+    border-color: #E7E7E7;
+    padding: 0px 0px 0px 0px;
 }
 
 .navbar .navbar-brand-image {
@@ -155,7 +172,7 @@ li a:hover:not(.active) {
 }
 
 .navbar .navbar-form {
-    padding: 0 4px;
+    padding: 0 0px;
 }
 
 
