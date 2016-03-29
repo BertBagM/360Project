@@ -19,47 +19,70 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if($_SESSION["user"] == NULL){
+if ($_SESSION["user"] == NULL) {
     
-}else{
-    
+} else {
+
     $name = $_SESSION["user"];
 
 // prints
-$sql = "SELECT * FROM Bets WHERE username = '$name';";
+    $sql = "SELECT * FROM currentBets WHERE username = '$name';";
 
 
-$betList = $conn->query($sql);
+    $betList = $conn->query($sql);
+    $total = 0;
+
+echo('<br>');
+    echo('<ul><h1>Current Bets</h1>');
+    while ($row = $betList->fetch_assoc()) {
+        echo('<li>');
+        $winner = $row["winner"];
+        $getTeamW = "SELECT image FROM hockeyTeams WHERE city ='$winner';";
+        $imageResult = $conn->query($getTeamW);
+        $WinnerImage = $imageResult->fetch_array()['image'];
+        $getTeamWName = "SELECT team FROM hockeyTeams WHERE city ='$winner';";
+        $TeamWResult = $conn->query($getTeamWName);
+        $WinnerTeamName = $TeamWResult->fetch_array()['team'];
+        
+        echo'<img src="images/HockeyLogos/';
+        echo"$WinnerImage";
+        echo'">';
+
+        echo " VS. ";
 
 
-echo('<ul><li><h1>Current Bets</h1></li>');
-while ($row = $betList->fetch_assoc()) {
-    echo('<li>');
+        $loser = $row["loser"];
 
-   
+        $getTeamL = "SELECT image FROM hockeyTeams WHERE city ='$loser';";
+        $imageLResult = $conn->query($getTeamL);
 
-            $team1= $row["winner"];
-            $team2= $row["loser"];
-     echo'<img src="images/HockeyLogos/$team1.gif" style="width:304px;height:228px;">';
+        $LoserImage = $imageLResult->fetch_array()['image'];
 
-    echo '<p>image /use winner row to find filepath</p>';
-    echo $row["winner"];
+        echo'<img src="images/HockeyLogos/';
+        echo"$LoserImage";
+        echo'"><br>';
 
-    echo " VS. ";
-    echo $row["loser"];
 
-    echo "<br><p>ON</P>";
-    echo $row["gameDate"];
-    echo "<br><p>FOR </P>";
-    echo $row["amount"];
+        echo $row["winner"];
 
-    echo "<br>";
-    echo "<br>";
+        echo " VS ";
+        echo $row["loser"];
 
-    echo('</li>');
+        echo '<br>Betting on The ';
+        echo $WinnerTeamName;
+        echo ' for $';
+        echo $row["amount"];
+
+         $total = $total + $row["amount"];
+        echo "<br>";
+        echo "<br>";
+
+        echo('</li>');
+
+    }
+    
+    echo'Potential Winnings : $ ';
+    echo "$total"; 
+    echo('</ul>');
 }
-
-echo('</ul>');
-}
-
 ?>

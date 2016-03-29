@@ -19,10 +19,6 @@ and open the template in the editor.
 
 
     <body>
-
-
-
-        // top
         <?php
         session_start();
 

@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 
 
 // QUERIES
-$sql = "INSERT INTO Bets (username, winner,loser,gameDate, amount) VALUES('$name','$winner','$loser','notImplemented',$amount);";
+$sql = "INSERT INTO currentBets (username, winner,loser, amount) VALUES('$name','$winner','$loser',$amount);";
 $conn->query($sql);
 
 
