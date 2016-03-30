@@ -12,6 +12,7 @@ $name = $_SESSION["user"];
 $amount = filter_input(INPUT_POST, 'amount');
 $winner = filter_input(INPUT_POST, 'winner');
 $loser = filter_input(INPUT_POST, 'loser');
+$date = filter_input(INPUT_POST, 'date');
 
 // MAKES CONNECTION
 $servername = "localhost";
@@ -28,7 +29,7 @@ if ($conn->connect_error) {
 
 
 // QUERIES
-$sql = "INSERT INTO currentBets (username, winner,loser, amount) VALUES('$name','$winner','$loser',$amount);";
+$sql = "INSERT INTO currentBets (username, winner,loser, amount,date) VALUES('$name','$winner','$loser',$amount, '$date');";
 $conn->query($sql);
 
 

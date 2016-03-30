@@ -49,7 +49,7 @@ echo('Dropped Accounts<br><br>');
 
 $createAccounts = "CREATE TABLE IF NOT EXISTS accounts(accountId int NOT NULL AUTO_INCREMENT, username varchar(30) UNIQUE, password varchar(30), balance float(9,0), accountType varchar(30) , PRIMARY KEY(accountID));";
 
-$createCurrentBets = "CREATE TABLE IF NOT EXISTS currentBets(username varchar(30), winner varchar(30), loser varchar(30), amount float(9,2));";
+$createCurrentBets = "CREATE TABLE IF NOT EXISTS currentBets(username varchar(30), winner varchar(30), loser varchar(30), amount float(9,2),date varchar(30));";
 
 $createHockeyTeams= "CREATE TABLE IF NOT EXISTS hockeyTeams(city varchar(30), team varchar(30), image varChar(30));";
 
