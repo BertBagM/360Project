@@ -26,6 +26,12 @@ and open the template in the editor.
 
                 <?php
                 session_start();
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
+
+
+
                 if ($_SESSION["user"] == NULL) {
                     echo('<div class="navbar-header navbar-right">
                     <a class="navbar-brand" href="userlogin.php">  <span>LogIn</span>
@@ -51,15 +57,19 @@ and open the template in the editor.
                         die("Connection failed: " . $conn->connect_error);
                     }
 
-
-
-                    echo('<div class="navbar-header navbar-left">
+                    if ($_SESSION["admin"] == TRUE) {
+                        
+                    } else {
+                        echo('<div class="navbar-header navbar-left">
                     <a class="navbar-brand" href="BetPage.php">  <span>Place Bet</span>
                     </a>
                 </div>
                ');
+                    }
 
-                    $balancesql = "SELECT balance FROM login WHERE username = '$name';";
+
+
+                    $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
 
                     $balanceResult = $conn->query($balancesql);
                     $balance = $balanceResult->fetch_array()['balance'];
@@ -102,8 +112,8 @@ and open the template in the editor.
             </div>
         </nav>
 
-                <br>
-                
-                
+        <br>
+
+
     </body>
 </html>

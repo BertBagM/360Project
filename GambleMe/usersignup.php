@@ -15,7 +15,7 @@
             
             ?>
         
-        <form method="post" action="usersignup.php">
+        <form method="post" action="usersignupFunc.php">
             <fieldset> 
                 <legend><h3> Sign up </h3></legend>
                 <p><strong>Pick a username:</strong><br/>

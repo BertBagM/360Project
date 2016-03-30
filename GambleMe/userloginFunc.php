@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 
 // QUERIES
 
-$sql = "SELECT * FROM login WHERE username = '$name' AND password = '$pass';";
+$sql = "SELECT * FROM accounts WHERE username = '$name' AND password = '$pass';";
 $result = $conn->query($sql);
 
 
@@ -34,8 +34,13 @@ error_reporting(E_ALL);
 
 if ($result->num_rows == 1) {
 
-    $balancesql = "SELECT balance FROM login WHERE username = '$name';";
+    $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
 
+    if($name == "admin"){
+        $_SESSION["admin"] = TRUE;
+    }else{
+         $_SESSION["admin"] = FALSE;
+    }
     $_SESSION["user"] = $name;
 
     $balanceResult = $conn->query($balancesql);
@@ -45,6 +50,7 @@ if ($result->num_rows == 1) {
 } else {
 
 
+    echo'Wrong username or password combination';
     header('Location: userlogin.php');
 }
 ?>

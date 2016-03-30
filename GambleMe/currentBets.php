@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -20,7 +19,17 @@ if ($conn->connect_error) {
 }
 
 if ($_SESSION["user"] == NULL) {
-    
+
+    echo('<br>');
+    echo('<ul><h1>Current Bets</h1>');
+    echo('<li>');
+
+    echo('<h1>Sign in or create a an ccount to start winning now!</h1>');
+
+    echo('</li>');
+
+    echo'Potential Winnings : unlimited';
+    echo('</ul>');
 } else {
 
     $name = $_SESSION["user"];
@@ -32,7 +41,7 @@ if ($_SESSION["user"] == NULL) {
     $betList = $conn->query($sql);
     $total = 0;
 
-echo('<br>');
+    echo('<br>');
     echo('<ul><h1>Current Bets</h1>');
     while ($row = $betList->fetch_assoc()) {
         echo('<li>');
@@ -43,7 +52,7 @@ echo('<br>');
         $getTeamWName = "SELECT team FROM hockeyTeams WHERE city ='$winner';";
         $TeamWResult = $conn->query($getTeamWName);
         $WinnerTeamName = $TeamWResult->fetch_array()['team'];
-        
+
         echo'<img src="images/HockeyLogos/';
         echo"$WinnerImage";
         echo'">';
@@ -73,16 +82,15 @@ echo('<br>');
         echo ' for $';
         echo $row["amount"];
 
-         $total = $total + $row["amount"];
+        $total = $total + $row["amount"];
         echo "<br>";
         echo "<br>";
 
         echo('</li>');
-
     }
-    
+
     echo'Potential Winnings : $ ';
-    echo "$total"; 
+    echo "$total";
     echo('</ul>');
 }
 ?>

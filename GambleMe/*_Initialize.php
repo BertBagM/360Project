@@ -83,7 +83,7 @@ echo 'Loaded HockeyTeam Table.. <br>';
 
 
 
-$accountNames = array("Brett", "Ross", "cs360User");
+$accountNames = array("Bert", "Ross", "cs360User");
 $accountPasswords = array("abcde3", "abcde3", "letmein");
 
 $accountCount = count($accountNames);
@@ -123,11 +123,11 @@ echo 'Loaded Upcoming Games .. <br>';
 
 
 
-$currentBet1 = "INSERT INTO currentBets (username, winner, loser,amount) VALUES('Bert', 'Vancouver', 'Calgary', 100.00);";
+$currentBet1 = "INSERT INTO currentBets (username, winner, loser,date, amount) VALUES('Bert', 'Vancouver', 'Calgary', '04/07/2016', 100.00);";
 
-$currentBet2 = "INSERT INTO currentBets (username, winner, loser,amount) VALUES('Ross', 'Vancouver', 'Calgary', 100.00);";
+$currentBet2 = "INSERT INTO currentBets (username, winner, loser,date ,amount) VALUES('Ross', 'Vancouver', 'Calgary','04/07/2016', 100.00);";
 
-$currentBet3 = "INSERT INTO currentBets (username, winner, loser,amount) VALUES('cs360user', 'Vancouver', 'Calgary', 100.00);";
+$currentBet3 = "INSERT INTO currentBets (username, winner, loser,date ,amount) VALUES('cs360user', 'Vancouver', 'Calgary', '04/07/2016',100.00);";
 
 $conn->query($currentBet1);
 $conn->query($currentBet2);

@@ -3,12 +3,43 @@ body {
     background-image: url("http://www.insidehockey.com/wp-content/uploads/2014/09/ice-background.jpg");
 }
 
-img{
-    width:132px;
-    height:112px;
+//iframe stuff
+
+body, html
+{
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
 }
 
-// modifies the field boxes
+#content
+{
+    position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+// CURRENT BETS CSS
+img{
+    width:172px;
+    height:152px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+li{
+    border-style: solid;
+}
+
+
+
+
+// LOGIN/SIGNUP CSS
 fieldset{
 
     background-color: lightgrey;
@@ -49,80 +80,9 @@ strong {
     display: none;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    text-align: center;
-}
-
-li{
-    border-style: solid;
-}
-
-
-
-
 #section-top .block {
     margin-bottom: 40px;
 }
-
-#section-top .block.last {
-    margin-bottom: 0px;
-}
-
-#section-top .item {
-    margin-bottom: 10px;
-}
-
-#section-top .item>div {
-    padding-top: 15px;
-}
-
-#section-top .item.no-border>div, #section-top .item>div.no-border {
-    border-top: none;
-}
-
-#section-top .item h4 {
-    color: #df4244;
-    font: normal 14px/24px 'museo_slab500', 'PT Serif', Georgia, serif;
-}
-
-#section-top .item div h4+p {
-    color: #666;
-    font: normal 14px/24px 'PT Serif', Georgia, serif;
-    margin-top: 0;
-}
-
-#section-top .item div p.desc {
-    color: #656565;
-    font: normal 13px/23px 'museo_slab500', 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-top: 0px;
-}
-
-#section-top .item div>p.date {
-    color: #444;
-    font: normal 13px/23px 'PT Serif', Georgia, serif;
-}
-
-#section-top .item div>p.date span.label {
-    display: inline-block;
-    color: #aaa;
-    background: #111;
-    padding: 4px 8px;
-    margin-top: 6px;
-    font: normal 10px/20px 'museo_slab500', 'Open Sans', "HelveticaNeue",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 
 .container {
     position: relative;

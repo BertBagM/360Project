@@ -14,7 +14,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="vendor/stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
-        
+
+
     </head>
 
 
@@ -29,73 +30,12 @@ and open the template in the editor.
         }
 
         include_once('NavBar.php');
-        //include_once('SlideShow.php');
         include_once('currentBets.php');
-        
         ?>
 
-
-
-        <div style="margin-left:25%;padding:1px 16px;height:1000px;background-color: transparent;">
-
-
-            <div id="section-top" style="background-color: transparent;">
-
-
-                <div class="content-container content">
-                    <section class="module">
-                        <div class="content-container content">
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-sm-2">
-                                    <img src="images/nhl1.jpg" style="width: 100%; margin-top: 20px;">
-                                </div>
-                                <div class="col-sm-10">  <a href="Hockey.php"<span><h2>Hockey</h2></span>
-                                    </a>
-                                    <p style="color: darkslategray; font-style: italic; font-size: 20;">
-                                        The greatest game on Earth
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section></div>
-
-                <div class="content-container content">
-                    <section class="module">
-                        <div class="content-container content">
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-sm-2">
-                                    <img src="images/nhl1.jpg" style="width: 100%; margin-top: 20px;">
-                                </div>
-                                <div class="col-sm-10">  <a href="Football.php"<span><h2>Football</h2></span>
-                                    </a>
-                                    <p style="color: darkslategray; font-style: italic; font-size: 20;">
-                                        HandEgg
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section></div>
-
-                <div class="content-container content">
-                    <section class="module">
-                        <div class="content-container content">
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-sm-2">
-                                    <img src="images/nhl1.jpg" style="width: 100%; margin-top: 20px;">
-                                </div>
-                                <div class="col-sm-10">  <a href="Basketball.php"<span><h2>Basketball</h2></span>
-                                    </a>
-                                    <p style="color: darkslategray; font-style: italic; font-size: 20;">
-                                        The worst version of laundry
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section></div>
-
-            </div>
-
+        <br>
+        <div id="content">
+            <iframe style="margin-top:-200px" align="right" width="75%" height="100%" marginwidth="50" frameborder="0" src="https://www.nhl.com/schedule" />
         </div>
-
     </body>
 </html>

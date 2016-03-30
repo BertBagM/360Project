@@ -18,15 +18,10 @@ and open the template in the editor.
 
 
     <body>
-
-
-
-
         <?php
         session_start();
 
         include_once('NavBar.php');
-        //include_once('SlideShow.php');
         ?>
         <P> <-- current bets table </p>
 
@@ -107,21 +102,15 @@ and open the template in the editor.
                     </select></p>
                 <p><strong>Amount:</strong><br/>
                     <input type="amount" name="amount"/></p>
-
                 <p><input type="submit" name="submit" value="Place Bet!"/></p>
-
             </form>
 
         </fieldset>
+        
+        
+        
+        
+        
 
-
-
-
-
-
-
-        <?php
-        session_start();
-        ?>
     </body>
 </html>
