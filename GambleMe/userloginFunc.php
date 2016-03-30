@@ -48,7 +48,7 @@ if ($result->num_rows == 1) {
 
     header('Location: index.php');
 } else {
-
+    echo $sql;
 
     echo'Wrong username or password combination';
     header('Location: userlogin.php');
