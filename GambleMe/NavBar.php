@@ -58,7 +58,11 @@ and open the template in the editor.
                     }
 
                     if ($_SESSION["admin"] == TRUE) {
-                        
+                        echo('<div class="navbar-header navbar-left">
+                    <a class="navbar-brand" href="updateGames.php">  <span>Update Games</span>
+                    </a>
+                </div>
+               ');
                     } else {
                         echo('<div class="navbar-header navbar-left">
                     <a class="navbar-brand" href="BetPage.php">  <span>Place Bet</span>
@@ -67,6 +71,26 @@ and open the template in the editor.
                ');
                     }
 
+                    if ($_SESSION["admin"] == TRUE) {
+                        
+                        
+                        echo('<div class="navbar-header navbar-right">
+                    <a class="navbar-brand" href="usersignout.php">  <span>Sign Out</span>
+                    </a>
+                </div>
+                
+                <div class="navbar-header navbar-right">
+                    <a class="navbar-brand" <span>');
+                    echo("$name");
+                    echo('</span>
+                    </a>
+                </div>'
+                    );
+                        
+                        
+                       
+                    } else {
+                       
 
 
                     $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
@@ -102,6 +126,7 @@ and open the template in the editor.
                     </a>
                 </div>'
                     );
+                }
                 }
                 ?>
 

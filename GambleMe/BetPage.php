@@ -112,7 +112,7 @@ and open the template in the editor.
                 <p><strong>Amount:</strong><br/>
                     <input type="amount" name="amount"/></p>
 
-                <p><strong>Date:</strong><br/>
+                <p><strong>Date: MM/DD/YYYY</strong><br/>
                     <input type="datet" name="date"/></p>
                 
                 <p><input type="submit" name="submit" value="Place Bet!"/></p>

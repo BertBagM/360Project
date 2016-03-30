@@ -23,14 +23,24 @@ and open the template in the editor.
         <?php
         session_start();
 
+        
         if (isset($_SESSION["user"])) {
             
         } else {
             $_SESSION["user"] = NULL;
         }
 
+         
+         
         include_once('NavBar.php');
-        include_once('currentBets.php');
+        
+        if (isset($_SESSION["admin"])) {
+             if($_SESSION["admin"] ==  TRUE){
+                echo('<br><br><br><br> hi');
+             }else{include_once('currentBets.php');}
+         }else{
+             include_once('currentBets.php');
+         }
         ?>
 
         <br>

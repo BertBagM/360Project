@@ -24,7 +24,7 @@ if ($_SESSION["user"] == NULL) {
     echo('<ul><h1>Current Bets</h1>');
     echo('<li>');
 
-    echo('<h1>Sign in or create a an ccount to start winning now!</h1>');
+    echo('<h1>Sign in or create a an account to start winning now!</h1>');
 
     echo('</li>');
 
