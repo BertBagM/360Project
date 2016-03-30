@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="vendor/stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
-
+<style>iframe { vertical-align:bottom; } </style>
 
     </head>
 
@@ -35,6 +35,18 @@ and open the template in the editor.
 
         <br>
         <div id="content">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <iframe style="margin-top:-200px" align="right" width="75%" height="100%" marginwidth="50" frameborder="0" src="https://www.nhl.com/schedule" />
         </div>
     </body>
