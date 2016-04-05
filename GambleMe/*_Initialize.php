@@ -127,6 +127,8 @@ $currentBet2 = "INSERT INTO currentBets (username, winner, home, visitor,date ,a
 $currentBet3 = "INSERT INTO currentBets (username, winner, home, visitor,date ,amount) VALUES('cs360user', 'Vancouver', 'Calgary','Vancouver',  '04/07/2016',100.00);";
 
 $conn->query($currentBet1);
+$conn->query($currentBet1);
+$conn->query($currentBet1);
 $conn->query($currentBet2);
 $conn->query($currentBet3);
 
