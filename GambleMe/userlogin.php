@@ -25,7 +25,7 @@
                     <input type="password" name="password"/></p>
                 <p><input type="submit" name="submit" value="login"/></p>
 
-            </form><form method="post" action="signup.html">
+            </form><form method="post" action="usersignup.php">
                 <p><input type="submit" name="submit" value="signup"/></p>
             </form>
 
