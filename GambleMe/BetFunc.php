@@ -11,7 +11,8 @@ session_start();
 $name = $_SESSION["user"];
 $amount = filter_input(INPUT_POST, 'amount');
 $winner = filter_input(INPUT_POST, 'winner');
-$loser = filter_input(INPUT_POST, 'loser');
+$home = filter_input(INPUT_POST, 'Home');
+$visitor = filter_input(INPUT_POST, 'Visitor');
 $date = filter_input(INPUT_POST, 'date');
 
 // MAKES CONNECTION
@@ -30,16 +31,13 @@ if ($conn->connect_error) {
 
 // QUERIES
 // creates a bet
-$sql = "INSERT INTO currentBets (username, winner,loser, amount,date) VALUES('$name','$winner','$loser',$amount, '$date');";
+$sql = "INSERT INTO currentBets (username, winner,home, visitor, amount,date) VALUES('$name','$winner','$home','$visitor',$amount, '$date');";
 $conn->query($sql);
 
 // subtracts from current balance
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-$name = $_SESSION["user"];
 
 $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
 
