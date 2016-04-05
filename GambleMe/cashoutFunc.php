@@ -25,7 +25,7 @@
 
         $name = $_SESSION["user"];
 
-        $balancesql = "SELECT balance FROM login WHERE username = '$name';";
+        $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
 
         $balanceResult = $conn->query($balancesql);
         $initialBalance = $balanceResult->fetch_array()['balance'];
@@ -33,7 +33,7 @@
         $newBalance = $initialBalance - $cashout;
 
 
-        $newbalancesql = "UPDATE login SET balance = $newBalance where username = '$name';";
+        $newbalancesql = "UPDATE accounts SET balance = $newBalance where username = '$name';";
 
         $zero = 0;
         

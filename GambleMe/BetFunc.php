@@ -29,9 +29,27 @@ if ($conn->connect_error) {
 
 
 // QUERIES
+// creates a bet
 $sql = "INSERT INTO currentBets (username, winner,loser, amount,date) VALUES('$name','$winner','$loser',$amount, '$date');";
 $conn->query($sql);
 
+// subtracts from current balance
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$name = $_SESSION["user"];
+
+$balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
+
+$balanceResult = $conn->query($balancesql);
+$initialBalance = $balanceResult->fetch_array()['balance'];
+
+$newBalance = $initialBalance - $amount;
+
+
+$newbalancesql = "UPDATE accounts SET balance = $newBalance where username = '$name';";
+$conn->query($newbalancesql);
 header('Location: index.php');
 ?>
