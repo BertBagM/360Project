@@ -62,6 +62,10 @@ and open the template in the editor.
                     <a class="navbar-brand" href="updateGames.php">  <span>Update Games</span>
                     </a>
                 </div>
+                
+
+
+                    
                ');
                     } else {
                         echo('<div class="navbar-header navbar-left">
@@ -82,12 +86,27 @@ and open the template in the editor.
                 <div class="navbar-header navbar-right">
                     <a class="navbar-brand" <span>');
                     echo("$name");
-                    echo('</span>
+                    echo'</span>
                     </a>
-                </div>'
-                    );
-                        
-                        
+                </div>';
+                            
+                    
+                    
+                    $balancesql = "SELECT balance FROM accounts WHERE username = '$name';";
+
+                    $balanceResult = $conn->query($balancesql);
+                    $balance = $balanceResult->fetch_array()['balance'];
+
+                    
+                    
+                    
+                    
+                    
+                       echo'<div class="navbar-header navbar-right"> <a class="navbar-brand">  <span>Balance $: ';
+                    echo("$balance");
+                    echo'</span>
+                    </a>
+                </div>'; 
                        
                     } else {
                        

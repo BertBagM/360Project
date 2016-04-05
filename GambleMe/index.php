@@ -36,7 +36,8 @@ and open the template in the editor.
         
         if (isset($_SESSION["admin"])) {
              if($_SESSION["admin"] ==  TRUE){
-                echo('<br><br><br><br> hi');
+                
+                 echo('<br><br><br><br> hiDyHo');
              }else{include_once('currentBets.php');}
          }else{
              include_once('currentBets.php');
