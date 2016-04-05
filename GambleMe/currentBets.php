@@ -92,5 +92,7 @@ if ($_SESSION["user"] == NULL) {
     echo'Potential Winnings : $ ';
     echo "$total";
     echo('</ul>');
+    
+    
 }
 ?>
