@@ -20,29 +20,32 @@ if ($conn->connect_error) {
 
 
 // prints
-    $sql = "SELECT * FROM upcomingGames;";    
+$date = "04/07/2016";
 
-    $GamesList = $conn->query($sql);
+//the date is a place holder
+$sql = "SELECT * FROM upcomingGames WHERE winner = 'unplayed' AND date >$date;";
 
-    echo('<br>');
-    echo('<ul><h1>Games to Update</h1>');
-    while ($row = $GamesList->fetch_assoc()) {
-        echo('<li>');
-        $Home = $row["home"];
-        $getHomeLink = "SELECT image FROM hockeyTeams WHERE city ='$Home';";
-        
-        $HomeImageResult = $conn->query($getHomeLink);
-        $HomeImage = $HomeImageResult->fetch_array()['image'];
-        
-        $getHomeTeamName = "SELECT team FROM hockeyTeams WHERE city ='$Home';";
-        $HomeTeamResult = $conn->query($getHomeTeamName);
-        $HomeTeamName = $HomeTeamResult->fetch_array()['team'];
+$GamesList = $conn->query($sql);
 
-        echo'<img src="images/HockeyLogos/';
-        echo"$HomeImage";
-        echo'">';
+echo('<br>');
+echo('<ul><h1>Games to Update</h1>');
+while ($row = $GamesList->fetch_assoc()) {
+    echo('<li>');
+    $Home = $row["home"];
+    $getHomeLink = "SELECT image FROM hockeyTeams WHERE city ='$Home';";
 
-        echo " VS. ";
+    $HomeImageResult = $conn->query($getHomeLink);
+    $HomeImage = $HomeImageResult->fetch_array()['image'];
+
+    $getHomeTeamName = "SELECT team FROM hockeyTeams WHERE city ='$Home';";
+    $HomeTeamResult = $conn->query($getHomeTeamName);
+    $HomeTeamName = $HomeTeamResult->fetch_array()['team'];
+
+    echo'<img src="images/HockeyLogos/';
+    echo"$HomeImage";
+    echo'">';
+
+    echo " VS. ";
 
     $Visitor = $row["visitor"];
     $getVisitorLink = "SELECT image FROM hockeyTeams WHERE city ='$Visitor';";
@@ -58,14 +61,16 @@ if ($conn->connect_error) {
     echo"$VisitorImage";
     echo'">';
 
-        echo "<br>";
-        echo "<br>";
+    echo "<br>";
+    echo "<br>";
 
-        echo('</li>');
-    }
+    echo('</li>');
+}
 
-    echo'Games Left in Season ';
-    echo "28";
-    echo('</ul>');
-
+$gamesLeftSqlQuery = "SELECT count(*) FROM upcomingGames WHERE winner ='unplayed';";
+$gamesLeftResult = $conn->query($gamesLeftSqlQuery);
+$GamesLeft = $gamesLeftResult->fetch_array()['count(*)'];
+echo'Games Left in Season ';
+echo "$GamesLeft`";
+echo('</ul>');
 ?>

@@ -102,7 +102,7 @@ $conn->query($loadAdminAccount);
 
 echo 'Loaded Admin Account .. <br>';
 
-$upcomingHome = array("Boston","New Jersey","Philadelphia","Washington","Carolina","Ottawa","Nashville","Chicago","Dallas","Calgary","Los Angeles","San Jose","Buffalo","Boston","New York","Philadelphia","Colorado","Minnesota","Montreal","Floria","New Jersey","Columbus","St. Louis","Dallas","Vancouver","Los Angeles","San Jose","Washington");
+$upcomingHome = array("Boston","New Jersey","Philadelphia","Washington","Carolina","Ottawa","Nashville","Chicago","Dallas","Calgary","Los Angeles","San Jose","Buffalo","Boston","New York","Philadelphia","Colorado","Minnesota","Montreal","Florida","New Jersey","Columbus","St. Louis","Dallas","Vancouver","Los Angeles","San Jose","Washington");
 $upcomingAway = array("Detroit","Tampa Bay","Toronto","Pittsburgh","Montreal","Florida","Arizona","St. Louis","Colorado","Vancouver","Anaheim","Winnipeg","Columbus","Ottawa","Detroit","Pittsburgh","Anaheim","Calgary","Tampa Bay","Carolina","Toronto","Chicago","Washington","Nashville","Edmonton","Winnipeg","Arizona","Anaheim");
 $upcomingDate = array("04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/07/2016","04/08/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/09/2016","04/10/2016");
 
@@ -115,7 +115,7 @@ $upcomingGameCount = count($upcomingHome);
 
 
 for ($x = 0; $x < $upcomingGameCount; $x++) {    
-    $conn->query("INSERT INTO upcomingGames(home,visitor,date) VALUES ('$upcomingHome[$x]', '$upcomingAway[$x]','$upcomingDate[$x]');");
+    $conn->query("INSERT INTO upcomingGames(home,visitor,date, winner) VALUES ('$upcomingHome[$x]', '$upcomingAway[$x]','$upcomingDate[$x]','unplayed');");
   
 } 
 
