@@ -46,6 +46,7 @@ and open the template in the editor.
 
                         </select></p>
                     <p><strong>Winning Team:</strong><br/>
+                        
                         <select name="winner">
                             <option value="Anaheim">Anaheim</option>
                             <option value="Arizona">Arizona</option>

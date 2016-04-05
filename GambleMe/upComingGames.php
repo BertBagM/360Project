@@ -29,6 +29,8 @@ $GamesList = $conn->query($sql);
 
 echo('<br>');
 echo('<ul><h1>Games to Update</h1>');
+
+$x =0;
 while ($row = $GamesList->fetch_assoc()) {
     echo('<li>');
     $Home = $row["home"];
@@ -69,7 +71,7 @@ while ($row = $GamesList->fetch_assoc()) {
     // beggining of the update form
     echo 'Winner:';
     echo '
-      <form method="post" action="updateGamesFunc.php">
+      <form name = "formxyz" method="post" action="updateGamesFunc.php">
       
   <input type="hidden" name="home" value="'; echo"$Home";echo'">
   
@@ -94,12 +96,16 @@ while ($row = $GamesList->fetch_assoc()) {
 
     echo'</select>
                 <p><input type="submit" name="submit" value="update"/></p>
+                </form>
                 
     ';
 
 
 
     echo('</li>');
+    ?><?php
+    
+    $x=$x+1;
 }
 
 $gamesLeftSqlQuery = "SELECT count(*) FROM upcomingGames WHERE winner ='unplayed';";

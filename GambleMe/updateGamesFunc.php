@@ -25,13 +25,13 @@ if ($conn->connect_error) {
 }
 
 
-$updateGamesql = "UPDATE upcomingGames SET winner = $winner  where home = $home AND visitor = $visitor;";
+$updateGamesql = "UPDATE upcomingGames SET winner = '$winner'  where home = '$home' AND visitor = '$visitor';";
 
 // QUERIES
 
 echo "$updateGamesql";
 
 
-//$conn->query($updateGamesql);
+$conn->query($updateGamesql);
 //header('Location: index.php');
 ?>
