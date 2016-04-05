@@ -45,42 +45,46 @@ if ($_SESSION["user"] == NULL) {
     echo('<ul><h1>Current Bets</h1>');
     while ($row = $betList->fetch_assoc()) {
         echo('<li>');
-        $winner = $row["winner"];
-        $getTeamW = "SELECT image FROM hockeyTeams WHERE city ='$winner';";
-        $imageResult = $conn->query($getTeamW);
-        $WinnerImage = $imageResult->fetch_array()['image'];
-        $getTeamWName = "SELECT team FROM hockeyTeams WHERE city ='$winner';";
-        $TeamWResult = $conn->query($getTeamWName);
-        $WinnerTeamName = $TeamWResult->fetch_array()['team'];
+        $home = $row["home"];
+        $getHomeTeam = "SELECT image FROM hockeyTeams WHERE city ='$home';";
+        $imageResult = $conn->query($getHomeTeam);
+        $HomeImage = $imageResult->fetch_array()['image'];
+        $getTeamHomeName = "SELECT team FROM hockeyTeams WHERE city ='$home';";
+        $TeamHomeResult = $conn->query($getTeamHomeName);
+        $HomeTeamName = $TeamHomeResult->fetch_array()['team'];
 
         echo'<img src="images/HockeyLogos/';
-        echo"$WinnerImage";
+        echo"$HomeImage";
         echo'">';
 
         echo " VS. ";
 
-
-        $loser = $row["loser"];
-
-        $getTeamL = "SELECT image FROM hockeyTeams WHERE city ='$loser';";
-        $imageLResult = $conn->query($getTeamL);
-
-        $LoserImage = $imageLResult->fetch_array()['image'];
+        $visitor = $row["visitor"];
+        $getVisitorTeam = "SELECT image FROM hockeyTeams WHERE city ='$visitor';";
+        $imageResult = $conn->query($getVisitorTeam);
+        $VisitorImage = $imageResult->fetch_array()['image'];
+        $getTeamVisitorName = "SELECT team FROM hockeyTeams WHERE city ='$visitor';";
+        $TeamVisitorResult = $conn->query($getTeamVisitorName);
+        $VisitorTeamName = $TeamVisitorResult->fetch_array()['team'];
 
         echo'<img src="images/HockeyLogos/';
-        echo"$LoserImage";
+        echo"$VisitorImage";
         echo'"><br>';
 
-
-        echo $row["winner"];
-
-        echo " VS ";
-        echo $row["loser"];
-
         echo '<br>Betting on The ';
+        
+        $winner = $row["winner"];
+        $getWinnerTeamNameSql = "SELECT team FROM hockeyTeams WHERE city = '$winner';";
+        $WinningTeamResult = $conn->query($getWinnerTeamNameSql);
+        $WinnerTeamName = $WinningTeamResult->fetch_array()['team'];
+        
+        
         echo $WinnerTeamName;
         echo ' for $';
         echo $row["amount"];
+        
+        
+        
 
         $total = $total + $row["amount"];
         echo "<br>";
@@ -92,7 +96,5 @@ if ($_SESSION["user"] == NULL) {
     echo'Potential Winnings : $ ';
     echo "$total";
     echo('</ul>');
-    
-    
 }
 ?>
