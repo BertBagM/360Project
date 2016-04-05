@@ -58,15 +58,7 @@ and open the template in the editor.
                     }
 
                     if ($_SESSION["admin"] == TRUE) {
-                        echo('<div class="navbar-header navbar-left">
-                    <a class="navbar-brand" href="updateGames.php">  <span>Update Games</span>
-                    </a>
-                </div>
-                
-
-
-                    
-               ');
+                      
                     } else {
                         echo('<div class="navbar-header navbar-left">
                     <a class="navbar-brand" href="BetPage.php">  <span>Place Bet</span>
