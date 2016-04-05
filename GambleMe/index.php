@@ -14,40 +14,41 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="vendor/stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
-<style>iframe { vertical-align:bottom; } </style>
+        <style>iframe { vertical-align:bottom; } </style>
 
     </head>
 
 
     <body>
-        <?php
-        session_start();
 
-        
-        if (isset($_SESSION["user"])) {
-            
-        } else {
-            $_SESSION["user"] = NULL;
-        }
 
-         
-         
-        include_once('NavBar.php');
-        
-        if (isset($_SESSION["admin"])) {
-             if($_SESSION["admin"] ==  TRUE){
-                
-                 echo('<br><br><br><br> hiDyHo');
-             }else{include_once('currentBets.php');}
-         }else{
-             include_once('currentBets.php');
-         }
-        ?>
 
-        <br>
         <div id="content">
-            <br>
-            <br>
+            <?php
+            session_start();
+
+
+            if (isset($_SESSION["user"])) {
+                
+            } else {
+                $_SESSION["user"] = NULL;
+            }
+
+
+
+            include_once('NavBar.php');
+
+            // all 3 cases, admin = true, false, empty i,e normal user
+            if (isset($_SESSION["admin"])) {
+                if ($_SESSION["admin"] == TRUE) {
+                    include_once('upComingGames.php');
+                } else {
+                    include_once('currentBets.php');
+                }
+            } else {
+                include_once('currentBets.php');
+            }
+            ?>
             <br>
             <br>
             <br>

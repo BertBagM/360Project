@@ -53,7 +53,7 @@ $createCurrentBets = "CREATE TABLE IF NOT EXISTS currentBets(username varchar(30
 
 $createHockeyTeams= "CREATE TABLE IF NOT EXISTS hockeyTeams(city varchar(30), team varchar(30), image varChar(30));";
 
-$createUpcomingGames ="CREATE TABLE IF NOT EXISTS upcomingGames(home varchar(30), visitors varchar(30), date varchar(30), winner varchar(30));";
+$createUpcomingGames ="CREATE TABLE IF NOT EXISTS upcomingGames(home varchar(30), visitor varchar(30), date varchar(30), winner varchar(30));";
 
 $conn->query($createAccounts);
 echo('Created Accounts Table.. <br> ');
@@ -115,7 +115,7 @@ $upcomingGameCount = count($upcomingHome);
 
 
 for ($x = 0; $x < $upcomingGameCount; $x++) {    
-    $conn->query("INSERT INTO upcomingGames(home,visitors,date) VALUES ('$upcomingHome[$x]', '$upcomingAway[$x]','$upcomingDate[$x]');");
+    $conn->query("INSERT INTO upcomingGames(home,visitor,date) VALUES ('$upcomingHome[$x]', '$upcomingAway[$x]','$upcomingDate[$x]');");
   
 } 
 
