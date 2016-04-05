@@ -63,24 +63,42 @@ while ($row = $GamesList->fetch_assoc()) {
 
     echo "<br>";
     echo "<br>";
+
+
+
+    // beggining of the update form
     echo 'Winner:';
-    echo "$Home";
-    echo "$Visitor";
-    
     echo '
-      <form method="post" action="depositFunc.php">
-                   <select name="winner">
-<option value="unfinished">unfinished</option>                            
-<option value="
-                            $Home">$Home</option>
-                            <option value="Arizona">Arizona</option>
-                   </selct>
+      <form method="post" action="updateGamesFunc.php">
+      
+  <input type="hidden" name="home" value="'; echo"$Home";echo'">
+  
+  <input type="hidden" name="visitor" value="'; echo"$Visitor";echo'">
+
+<select name="winner">
+<option value="unfinished">unfinished</option>     ';
+
+
+    echo'
+<option value="';
+    echo"$Home";
+    echo'">';
+    echo"$Home</option>";
+
+    echo'
+<option value="';
+    echo"$Visitor";
+    echo'">';
+    echo"$Visitor</option>";
+
+
+    echo'</select>
                 <p><input type="submit" name="submit" value="update"/></p>
                 
     ';
-    
-    
-    
+
+
+
     echo('</li>');
 }
 
