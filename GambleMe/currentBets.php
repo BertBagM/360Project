@@ -94,7 +94,11 @@ if ($_SESSION["user"] == NULL) {
     }
 
     echo'Potential Winnings : $ ';
-    echo "$total";
+    echo "$total<br>";
+    
+    echo'<form action="updateBets.php" method="get"><br><button type="submit" action="usersignup.php" class="btn btn-success">Update Bets</button>
+</form>';
     echo('</ul>');
+    
 }
 ?>
