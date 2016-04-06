@@ -35,17 +35,17 @@ and open the template in the editor.
             <br>
             <br>
             <ul >
-                <legend><h3>Place Bet</h3></legend>
+                <legend><h3 style="font-size: 32px; color: #565051;font-weight:bold">Place Bet</h3></legend>
 
                 <form method="post" action="BetFunc.php">
-                    <p><strong>Sport</strong><br/>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Sport</strong><br/>
                         <select name="sport">
                             <option value="hockey">Hockey</option>
                             <option value="football">FootBall</option>
                             <option value="basketball">BasketBall</option>
 
                         </select></p>
-                    <p><strong>Winning Team:</strong><br/>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Winning Team:</strong><br/>
                         
                         <select name="winner">
                             <option value="Anaheim">Anaheim</option>
@@ -78,7 +78,7 @@ and open the template in the editor.
                             <option value="Washington">Washington</option>
                             <option value="Winnipeg">Winnipeg</option>         
                         </select></p>
-                    <p><strong>Home Team:</strong><br/>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Home Team:</strong><br/>
                         <select name="Home">
                             <option value="Anaheim">Anaheim</option>
                             <option value="Arizona">Arizona</option>
@@ -110,7 +110,7 @@ and open the template in the editor.
                             <option value="Washington">Washington</option>
                             <option value="Winnipeg">Winnipeg</option>         
                         </select></p>
-                        <p><strong>Visiting Team:</strong><br/>
+                        <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Visiting Team:</strong><br/>
                         <select name="Visitor">
                             <option value="Anaheim">Anaheim</option>
                             <option value="Arizona">Arizona</option>
@@ -143,13 +143,13 @@ and open the template in the editor.
                             <option value="Winnipeg">Winnipeg</option>         
                         </select></p>
                    
-                    <p><strong>Amount:</strong><br/>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Amount:</strong><br/>
                         <input type="amount" name="amount"/></p>
 
-                    <p><strong>Date: MM/DD/YYYY</strong><br/>
-                        <input type="datet" name="date"/></p>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><strong>Date: </strong><br/>
+                        <input type="date" name="date"/></p>
 
-                    <p><input type="submit" name="submit" value="Place Bet!"/></p>
+                    <p style="font-size: 22px; color: #565051;font-weight:bold"><input type="submit" name="submit" value="Place Bet!"/></p>
 
                 </form>
             </ul>
