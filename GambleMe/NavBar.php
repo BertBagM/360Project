@@ -20,7 +20,7 @@ and open the template in the editor.
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header navbar-left">
-                    <a class="navbar-brand" href="index.php"<span>Home</span>
+                    <a class="navbar-brand" href="index.php"<span style="font-size: 22px; color:#565051;font-weight:bold">Home</span>
                     </a>
                 </div>
 
@@ -34,11 +34,11 @@ and open the template in the editor.
 
                 if ($_SESSION["user"] == NULL) {
                     echo('<div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="userlogin.php">  <span>LogIn</span>
+                    <a class="navbar-brand" href="userlogin.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Log In</span>
                     </a>
                 </div>
                 <div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="usersignup.php">  <span>Sign up</span>
+                    <a class="navbar-brand" href="usersignup.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Sign up</span>
                     </a>
                 </div>');
                 } else {
@@ -61,7 +61,7 @@ and open the template in the editor.
                       
                     } else {
                         echo('<div class="navbar-header navbar-left">
-                    <a class="navbar-brand" href="BetPage.php">  <span>Place Bet</span>
+                    <a class="navbar-brand" href="BetPage.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Place Bet</span>
                     </a>
                 </div>
                ');
@@ -71,12 +71,12 @@ and open the template in the editor.
                         
                         
                         echo('<div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="usersignout.php">  <span>Sign Out</span>
+                    <a class="navbar-brand" href="usersignout.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Sign Out</span>
                     </a>
                 </div>
                 
-                <div class="navbar-header navbar-right">
-                    <a class="navbar-brand" <span>');
+                <div class="navbar-header navbar-right" style="font-size: 22px; color:#565051;font-weight:bold">
+                    <a class="navbar-brand" <span style="font-size: 22px; color:#565051;font-weight:bold">');
                     echo("$name");
                     echo'</span>
                     </a>
@@ -94,7 +94,7 @@ and open the template in the editor.
                     
                     
                     
-                       echo'<div class="navbar-header navbar-right"> <a class="navbar-brand">  <span>Balance $: ';
+                       echo'<div class="navbar-header navbar-right"> <a class="navbar-brand">  <span style="font-size: 22px; color:#565051;font-weight:bold">Balance $: ';
                     echo("$balance");
                     echo'</span>
                     </a>
@@ -110,18 +110,18 @@ and open the template in the editor.
                     $balance = $balanceResult->fetch_array()['balance'];
 
                     echo('<div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="usersignout.php">  <span>Sign Out</span>
+                    <a class="navbar-brand" href="usersignout.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Sign Out</span>
                     </a>
                 </div>
                 <div class="navbar-header navbar-right">
-                    <a class="navbar-brand">  <span>Balance $: ');
+                    <a class="navbar-brand">  <span style="font-size: 22px; color:#565051;font-weight:bold">Balance $: ');
                     echo("$balance");
                     echo('</span>
                     </a>
                 </div>
 
                 <div class="navbar-header navbar-right">
-                    <a class="navbar-brand" <span>');
+                    <a class="navbar-brand" <span style="font-size: 22px; color:#565051;font-weight:bold">');
                     echo("$name");
                     echo('</span>
                     </a>
@@ -129,11 +129,11 @@ and open the template in the editor.
                     );
 
                     echo('<div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="deposit.php">  <span>Deposit</span>
+                    <a class="navbar-brand" href="deposit.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Deposit</span>
                     </a>
                 </div>
                             <div class="navbar-header navbar-right">
-                    <a class="navbar-brand" href="cashout.php">  <span>Cashout</span>
+                    <a class="navbar-brand" href="cashout.php">  <span style="font-size: 22px; color:#565051;font-weight:bold">Cashout</span>
                     </a>
                 </div>'
                     );

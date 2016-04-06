@@ -17,16 +17,16 @@
         
         <form method="post" action="usersignupFunc.php">
             <fieldset> 
-                <legend><h3> Sign up </h3></legend>
-                <p><strong>Pick a username:</strong><br/>
+                <legend><h3 style="font-size: 32px; color: #2B1B17;font-weight:bold"> Sign up </h3></legend>
+                <p style="font-size: 22px; color: #2B1B17;font-weight:bold"><strong>Pick a username:</strong><br/>
                     <input type="text" name="username"/></p>
                
                 
-                <p><strong>Pick a password:</strong><br/>
+                <p style="font-size: 22px; color: #2B1B17;font-weight:bold"><strong>Pick a password:</strong><br/>
                     <input type="password" name="password"/></p>
                 
                 
-                <p><input type="submit" name="submit" value="signup"/></p>
+                <p style="font-size: 22px; color: #2B1B17;font-weight:bold"><input type="submit" name="submit" value="signup"/></p>
                 
             </fieldset>
     </body>
